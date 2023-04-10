@@ -1,7 +1,8 @@
 server:
-  port: 7004
+  port: 7001
   
-config: application
+config: 
+  info: application
 
 eureka:
   instance:
