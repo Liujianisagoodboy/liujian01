@@ -1,0 +1,29 @@
+server:
+  port: 80
+
+
+#spring:
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.17.4:3306/myDB01?characterEncoding=UTF-8&useUnicode=true&serverTimezone=GMT%2B8&useSSL=false
+#    username: root
+#    password: 123456
+spring:
+  application:
+    name: cloud-order-server
+
+eureka:
+  client:
+    #表示是否将自己注册进eureka server，默认为true
+    register-with-eureka: true
+    #表示是否从eureka server获取自己的注册信息自默认为true，单节点无所谓而集群必须设置为true才能配合ribbon所有负再均衡
+    fetch-registry: true
+    service-url:
+      #设置eureka server 交互的地址查询服务和注册都需要依赖这个地址
+      #defaultZone: http://localhost:7001/eureka #单机版
+      #defualtZone: http://eureka7001.com:7001/eureka #这里同上，只不过在win10的hosts文件中做了地址映射
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+
+
+
