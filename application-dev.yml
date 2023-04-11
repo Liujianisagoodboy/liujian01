@@ -2,7 +2,7 @@ server:
   port: 100
   
 config: 
-  info: application1111111111234234345354353
+  info: application version=1.0
 
 eureka:
   instance:
